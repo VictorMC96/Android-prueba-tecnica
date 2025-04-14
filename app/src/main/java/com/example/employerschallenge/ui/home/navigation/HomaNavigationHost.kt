@@ -11,15 +11,26 @@ import com.example.employerschallenge.ui.home.navigation.HomeRoute.Companion.EMP
 import com.example.employerschallenge.ui.home.navigation.HomeRoute.EmployeeDetail
 import com.example.employerschallenge.ui.home.navigation.HomeRoute.Employees
 import com.example.employerschallenge.ui.employee.detail.EmployeeDetailScreen
+import com.example.employerschallenge.ui.home.navigation.HomeRoute.SplashScreen
+import com.example.employerschallenge.ui.splashscreen.SplashScreen
 
 @Composable
 fun JarsNavHost(navHostController: NavHostController) {
     NavHost(
         navController = navHostController,
-        startDestination = Employees.route
+        startDestination = SplashScreen.route
     ) {
+        splashScreenNav(navController = navHostController)
         employeesNav(navController = navHostController)
         employeeDetailNav(navController = navHostController)
+    }
+}
+
+private fun NavGraphBuilder.splashScreenNav(navController: NavHostController) {
+    composable(route = SplashScreen.route) {
+        SplashScreen(
+            onSplashFinished = { navController.navigate(Employees.route) }
+        )
     }
 }
 

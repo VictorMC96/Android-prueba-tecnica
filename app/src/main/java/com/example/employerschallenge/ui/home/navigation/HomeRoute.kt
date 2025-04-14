@@ -5,6 +5,7 @@ import androidx.navigation.navArgument
 import com.example.employerschallenge.core.extensions.DEFAULT_VALUE
 
 sealed class HomeRoute(val route: String) {
+    data object SplashScreen : HomeRoute("splashScreen")
     data object Employees : HomeRoute("employees")
     data object EmployeeDetail : HomeRoute("employeeDetail/{$EMPLOYEE_ID_ARGUMENT}"){
 

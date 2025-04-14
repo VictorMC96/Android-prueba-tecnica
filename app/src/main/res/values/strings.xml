@@ -12,5 +12,6 @@
     <string name="id">Employee ID: %d</string>"
     <string name="name">Name: %s</string>"
     <string name="salary">Salary: %d</string>"
-    <string name="age">Age: %d</string>"
+    <string name="age">Age: %d</string>
+    <string name="splash_screen">Salvador Maurilio, Test</string>"
 </resources>

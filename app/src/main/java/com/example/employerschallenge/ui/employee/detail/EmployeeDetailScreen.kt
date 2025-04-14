@@ -204,10 +204,8 @@ fun EmployeeDetailContentUiStateSuccessPreview() {
 @Composable
 fun EmployeeDetailContentUiStateErrorPreview() {
     EmployeesChallengeTheme {
-        EmployeesChallengeTheme {
-            EmployeeDetailContent(
-                error = EmployeesDetailException()
-            )
-        }
+        EmployeeDetailContent(
+            error = EmployeesDetailException()
+        )
     }
 }
