@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Employees Chellenge</string>
+
+    <string name="employees">Employees</string>"
+    <string name="error_get_data">Error getting information</string>
+    <string name="something_went_wrong">Oops! Something went wrong</string>
+    <string name="employees_load_error">We couldn\'t load the employees.\nPlease check your connection and try again.</string>
+    <string name="employee_detail_load_error">We couldn\'t load the employee detail.\nPlease check your connection and try again.</string>
+    <string name="default_error">Please check your connection and try again.</string>
+    <string name="retry">Retry</string>
+    <string name="detail">Detail</string>"
+    <string name="id">Employee ID: %d</string>"
+    <string name="name">Name: %s</string>"
+    <string name="salary">Salary: %d</string>"
+    <string name="age">Age: %d</string>"
+</resources>
