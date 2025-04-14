@@ -8,19 +8,17 @@ import com.example.employerschallenge.domain.model.Employee
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 @HiltViewModel
 class EmployeeDetailViewModel @Inject constructor(
     private val getEmployeeDetailUseCase: GetEmployeeDetailUseCase,
-    private val coroutinesDispatchers: CoroutinesDispatchers,
+    private val coroutinesDispatchers: CoroutinesDispatchers
 ) : ViewModel() {
 
     private val _employeeDetailUiState = MutableStateFlow(EmployeeDetailUiState())
-
-    val employeeDetailUiState: StateFlow<EmployeeDetailUiState>
-        get() = _employeeDetailUiState
+    val employeeDetailUiState = _employeeDetailUiState.asStateFlow()
 
     fun getEmployeeDetail(employeeId: Int) {
         if (employeeDetailUiState.value.employee != null || employeeDetailUiState.value.isLoading) return

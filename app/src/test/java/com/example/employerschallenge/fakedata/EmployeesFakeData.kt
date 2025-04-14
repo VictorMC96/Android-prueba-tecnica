@@ -8,8 +8,8 @@ import com.example.employerschallenge.domain.model.Employee
 const val ANY_EMPLOYEES_ENDPOINT = "/employees"
 const val ANY_EMPLOYEE_DETAIL_ID = 1
 const val ANY_EMPLOYEE_DETAIL_ENDPOINT = "/employee/$ANY_EMPLOYEE_DETAIL_ID"
-const val ANY_VALID_EMPLOYEE_DETAIL_ID = "1"
-const val ANY_INVALID_EMPLOYEE_DETAIL_ID = "2"
+const val ANY_VALID_EMPLOYEE_ID = "1"
+const val ANY_INVALID_EMPLOYEE_ID = "2"
 
 fun givenEmployeesResponseFakeData() = EmployeesResponse(
     status = "success",
