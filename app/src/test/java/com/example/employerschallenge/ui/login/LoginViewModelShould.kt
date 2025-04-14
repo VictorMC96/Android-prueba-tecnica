@@ -7,7 +7,6 @@ import com.example.employerschallenge.fakedata.ANY_INVALID_EMPLOYEE_ID
 import com.example.employerschallenge.fakedata.ANY_VALID_EMPLOYEE_ID
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.flow.lastOrNull
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule

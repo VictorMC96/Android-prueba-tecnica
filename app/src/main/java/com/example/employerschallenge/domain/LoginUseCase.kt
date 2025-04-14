@@ -9,7 +9,7 @@ class LoginUseCase @Inject constructor() {
 
     companion object {
         private const val DEFAULT_USER_ID = "1"
-        private const val DEFAULT_DELAY = 2000L
+        private const val DEFAULT_DELAY = 1500L
     }
 
     fun login(userId: String): Flow<Boolean> = flow {

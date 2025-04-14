@@ -16,5 +16,6 @@
     <string name="splash_screen">Salvador Maurilio, Test</string>"
     <string name="login">Login</string>
     <string name="input_text">Input text</string>
-    <string name="enter_your_user_id">Enter your user ID</string>"
+    <string name="enter_your_user_id">Enter your user ID</string>
+    <string name="invalid_user">User ID Invalid</string>"
 </resources>

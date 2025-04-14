@@ -28,11 +28,11 @@ private const val DELAY_SPLASH = 3000L
 
 @Composable
 fun SplashScreen(
-    onSplashFinished: () -> Unit = {}
+    openLogin: () -> Unit = {}
 ) {
     LaunchedEffect(Unit) {
         delay(DELAY_SPLASH)
-        onSplashFinished()
+        openLogin()
     }
 
     Scaffold(content = { paddingValues ->

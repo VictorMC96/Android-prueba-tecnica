@@ -11,7 +11,9 @@ import com.example.employerschallenge.ui.home.navigation.HomeRoute.Companion.EMP
 import com.example.employerschallenge.ui.home.navigation.HomeRoute.EmployeeDetail
 import com.example.employerschallenge.ui.home.navigation.HomeRoute.Employees
 import com.example.employerschallenge.ui.employee.detail.EmployeeDetailScreen
+import com.example.employerschallenge.ui.home.navigation.HomeRoute.Login
 import com.example.employerschallenge.ui.home.navigation.HomeRoute.SplashScreen
+import com.example.employerschallenge.ui.login.LoginScreen
 import com.example.employerschallenge.ui.splashscreen.SplashScreen
 
 @Composable
@@ -21,6 +23,7 @@ fun JarsNavHost(navHostController: NavHostController) {
         startDestination = SplashScreen.route
     ) {
         splashScreenNav(navController = navHostController)
+        loginNav(navController = navHostController)
         employeesNav(navController = navHostController)
         employeeDetailNav(navController = navHostController)
     }
@@ -29,7 +32,27 @@ fun JarsNavHost(navHostController: NavHostController) {
 private fun NavGraphBuilder.splashScreenNav(navController: NavHostController) {
     composable(route = SplashScreen.route) {
         SplashScreen(
-            onSplashFinished = { navController.navigate(Employees.route) }
+            openLogin = {
+                navController.navigate(Login.route) {
+                    popUpTo(SplashScreen.route) {
+                        inclusive = true
+                    }
+                }
+            }
+        )
+    }
+}
+
+private fun NavGraphBuilder.loginNav(navController: NavHostController) {
+    composable(route = Login.route) {
+        LoginScreen(
+            openEmployees = {
+                navController.navigate(Employees.route) {
+                    popUpTo(Login.route) {
+                        inclusive = true
+                    }
+                }
+            }
         )
     }
 }
